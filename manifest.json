@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "BtrMid",
+	"version": "1.0",
+	"description": "Swaps the behavior of the default mouse middle click and shift+middle click. Meaning a normal middle click opens a new tab and immediately focuses it.",
+	"content_scripts": [
+		{
+			"js": [
+				"scripts/content.js"
+			],
+			"matches": [
+				"<all_urls>"
+			]
+		}
+	],
+	"background": {
+		"service_worker": "scripts/background.js"
+	},
+	"permissions": [
+		"tabs"
+	]
+}
